@@ -1,0 +1,27 @@
+<flow xmlns="http://www.springframework.org/schema/webflow"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/webflow
+	http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
+	start-state="welcome">	
+  
+  <view-state id="welcome">
+    <transition on="next" to="introductionActionState"/>
+  </view-state>
+  
+  <view-state id="menu">
+  	<transition on="next" to="endState"/>
+  </view-state>
+  
+  <action-state id="introductionActionState">
+  		<evaluate expression="getHolidaysAction" />
+  		<transition on="success" to="introduction" />
+  </action-state> 
+  
+  <view-state id="introduction">
+  		<transition on="next" to="menu"/>
+  </view-state>
+  
+  
+  <end-state id="endState"/>
+</flow>
