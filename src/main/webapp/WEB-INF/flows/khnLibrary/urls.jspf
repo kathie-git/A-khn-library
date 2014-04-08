@@ -1,0 +1,2 @@
+<c:url var="homeUrl" value="/" />
+<c:url var="libraryUrl" value="/webflow/khnLibrary.html" />
