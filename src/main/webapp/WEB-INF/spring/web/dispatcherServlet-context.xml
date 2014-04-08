@@ -30,7 +30,7 @@
 	</bean>
 	
 	<!-- Scans within the base package of the application for @Components to configure as beans -->
-	<context:component-scan base-package="khn.library" />	
+	<context:component-scan base-package="khn.library.proj" />	
 	
 	<import resource="webflowContext.xml"/>
 			

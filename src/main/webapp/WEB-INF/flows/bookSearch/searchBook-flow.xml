@@ -3,14 +3,25 @@
 	xsi:schemaLocation="
 	http://www.springframework.org/schema/webflow
 	http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
-	start-state="bookSearchCriteria">	
+	start-state="searchBooksForm">	
   
-  <view-state id="bookSearchCriteria">
+  <view-state id="searchBooksForm">
     <on-render>
-            <evaluate expression="bookCriteriaAction.setupForm" />
+            <evaluate expression="searchBooksFormAction.setupForm" />
     </on-render>
-  	<transition on="search" to="bookList"/>
+  	<transition on="search" to="searchBooksActionState">
+		 <!-- <evaluate expression="searchBooksFormAction.bindAndValidate" /> -->
+	</transition>
   </view-state>
+  
+  <view-state id="bookList">
+  	<transition on="next" to="endState" />
+  </view-state>
+  
+  <action-state id="searchBooksActionState">
+  	<evaluate expression="searchBooksAction.searchBooks" />
+  	<transition on="success" to="bookList" /> 
+  </action-state>
   
   <end-state id="endState"/>
 </flow>

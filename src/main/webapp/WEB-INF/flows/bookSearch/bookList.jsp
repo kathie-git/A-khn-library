@@ -7,8 +7,9 @@
   xmlns:jsp="http://java.sun.com/JSP/Page"
   xmlns:spring="http://www.springframework.org/tags"
   xmlns:form="http://www.springframework.org/tags/form">
-  
+  <heading><title>books found</title></heading>
   <body>
+    <h2>books found</h2>
 	<table border="1">
  	 <tr>
     	<th>ISBN</th>
@@ -16,7 +17,7 @@
     	<th>Author</th>
    	    <th>Publish Date</th>
   	</tr>
- 	 <c:forEach items="${books}" var="book">
+ 	 <c:forEach items="${books}" var="book"> 
   	   <tr>
     	<td>
      	  <a href="${flowExecutionUrl}&_eventId=select&isbn=${book.isbn}">
@@ -25,9 +26,9 @@
 		</td>
         <td>${book.name}</td>
         <td>${book.author}</td>
-        <td><fmt:formatDate value="${book.publishDate}" pattern="yyyy-MM-dd" /></td>
+       <%--  <td><fmt:formatDate value="${book.publishDate}" pattern="yyyy-MM-dd" /></td> --%>
  	   </tr>
- 	 </c:forEach>
+ 	</c:forEach>
 	</table>
   </body>
 </html>

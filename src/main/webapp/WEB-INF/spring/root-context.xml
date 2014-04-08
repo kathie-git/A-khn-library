@@ -8,5 +8,6 @@
 		
   <!-- Services -->
   
-  	<bean id="libraryService"   class="khn.library.service.LibraryServiceImpl"/>
+  	<bean id="libraryService"   class="khn.library.proj.service.LibraryServiceImpl"/>
+  	<bean id="bookService"   class="khn.library.proj.service.BookServiceImpl"/>
   </beans>

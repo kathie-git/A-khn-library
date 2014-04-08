@@ -5,11 +5,9 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html 
   xmlns:c="http://java.sun.com/jsp/jstl/core"
-  xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
   xmlns:jsp="http://java.sun.com/JSP/Page"
   xmlns:spring="http://www.springframework.org/tags"
   xmlns:form="http://www.springframework.org/tags/form">
-  
   
   <head><title>Introduction</title></head>
   
@@ -20,12 +18,13 @@
       as listed below 
       
     </p>
+    <%-- <c:set var="holiday" value="<%=new java.util.Date()%>" /> --%>
     <c:forEach items= "${holidays}" var="holiday" >
-       <fmt:formatDate value="${holiday}" pattern="dd-MM-yyyy" />
-       ${holiday}
+        <fmt:formatDate value="${holiday}" pattern="dd/MM/yyyy"/>  
+        <%-- <fmt:formatDate type="date" dateStyle="short" value="${holiday}" pattern="dd/MM/yyyy"/> --%>  
+       <%--  ${holiday}   --%>
        <br/>
     </c:forEach>
-  
   
    <br/>
    <br/>
