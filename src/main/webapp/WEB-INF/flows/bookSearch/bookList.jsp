@@ -17,7 +17,7 @@
     	<th>Author</th>
    	    <th>Publish Date</th>
   	</tr>
- 	 <c:forEach items="${books}" var="book"> 
+ 	 <c:forEach items="${booksFound}" var="book"> 
   	   <tr>
     	<td>
      	  <a href="${flowExecutionUrl}&_eventId=select&isbn=${book.isbn}">

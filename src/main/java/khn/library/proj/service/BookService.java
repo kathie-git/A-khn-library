@@ -1,10 +1,11 @@
 package khn.library.proj.service;
 
 
+
 import java.util.List;
 
 import khn.library.proj.domain.Book;
-import khn.library.proj.domain.BookCriteria;
+import khn.library.proj.domain.search.BookCriteria;
 
 
 

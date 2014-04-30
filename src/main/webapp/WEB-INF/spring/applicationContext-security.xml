@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Source project: sip05, branch: 08 (Maven Project) -->
 
 <beans:beans 
   xmlns="http://www.springframework.org/schema/security"
@@ -25,8 +24,8 @@
   <authentication-manager alias="authenticationManager">
     <authentication-provider>
       <user-service>
-        <user name="joshua" 
-          password="joshua" 
+        <user name="kathie" 
+          password="kathie" 
           authorities="ROLE_USER"/>
         <user name="RobinJBryce@example.com" 
           password="password" 

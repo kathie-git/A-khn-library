@@ -8,14 +8,14 @@ import java.util.List;
 import java.util.Map;
 
 import khn.library.proj.domain.Book;
-import khn.library.proj.domain.BookCriteria;
+import khn.library.proj.domain.search.BookCriteria;
 
 /**
  * @author Kathie
  *
  */
 public class BookServiceImpl implements BookService{
-	private Map<String, Book> books;
+	protected Map<String, Book> books;
 	
 	BookServiceImpl () {
 		books = new HashMap<String, Book> ();
@@ -23,37 +23,45 @@ public class BookServiceImpl implements BookService{
 		books.put("0001", new Book("0001",
 				"Spring Framework","Katherine", new GregorianCalendar(2014, 1, 12).getTime()));
 		books.put("0002", new Book("0002",
-				"Spring Data","Christine", new GregorianCalendar(2014, 3, 12).getTime()));
-		books.put("0003", new Book("0001",
+				"Spring Data","Katherine", new GregorianCalendar(2014, 3, 12).getTime()));
+		books.put("0003", new Book("0003",
 				"Spring Integration","Ringo", new GregorianCalendar(2014, 3, 25).getTime()));
-		books.put("0004", new Book("0001",
+		books.put("0004", new Book("0004",
 				"Spring In Action","Melissa", new GregorianCalendar(2013, 6, 7).getTime()));
 	}
 	@Override
-	public List<Book> search(BookCriteria bookCriteria) {
-		List<Book> results = new ArrayList<Book>();
-		/*List<Book> results = new ArrayList<Book>();
+	public List<Book> search(BookCriteria criteria) {
+		/*For testing only*/
+		/*criteria.setKeyword("Integration"); 
+		criteria.setAuthor("");*/
+		
+		List<Book> booksFnd = new ArrayList<Book>();
 		for (Book book : books.values()) {
-            String keyword = bookCriteria.getKeyword().trim();
-            String author = bookCriteria.getAuthor().trim();
+            String keyword = criteria.getKeyword().trim();
+            String author =  criteria.getAuthor().trim();
             boolean keywordMatches = keyword.length() > 0
                     && book.getName().contains(keyword);
             boolean authorMatches = book.getAuthor().equals(author);
             if (keywordMatches || authorMatches) {
-                results.add(book);
+                booksFnd.add(book);
             }
-        }*/
+        }
 		/*Stub implementation*/
-		Book book;
+		/*Book book;
 		book = books.get("0001");
 		results.add(book);
 		book = books.get("0002");
 		results.add(book);
-		return results;
+		book = books.get("0003");
+		results.add(book);
+		book = books.get("0004");
+		results.add(book);*/
+		return booksFnd;
 	}
 	
 	@Override
 	public Book findByIsbn(String isbn) {
+		/* not yet implemented */
 		return books.get(isbn);
 	}
 	

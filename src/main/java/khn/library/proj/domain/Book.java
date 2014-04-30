@@ -3,6 +3,9 @@ package khn.library.proj.domain;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang.builder.ToStringStyle;
+
 /**
  * @author Kathie Nguyen
  *
@@ -46,5 +49,15 @@ public class Book implements Serializable {
 		public void setAuthor(String author) {
 			this.author = author;
 		}
+		
+		public String toString() {
+			return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
+			.append("isbn",isbn)
+			.append("name", name)
+			.append("author", author)
+			.append("publishDate",publishDate)
+			.toString();
+		}
+		
 }
 

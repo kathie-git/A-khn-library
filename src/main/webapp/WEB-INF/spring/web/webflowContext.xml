@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Source project: sip05, branch: 08 (Maven Project) -->
 
 <beans xmlns="http://www.springframework.org/schema/beans"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -53,7 +52,7 @@
   <bean id="searchBooksFormAction" 
   	class="org.springframework.webflow.action.FormAction">
     <property name="formObjectClass" 
-      value="khn.library.proj.domain.BookCriteria"/>
+      value="khn.library.proj.domain.search.BookCriteria"/>
       <property name="propertyEditorRegistrar">
         <bean class="khn.library.proj.beans.CustomPropertyEditorRegistrar"/>
       </property>

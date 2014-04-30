@@ -11,7 +11,7 @@ import java.util.HashMap;
 
 
 import khn.library.proj.domain.Book;
-import khn.library.proj.domain.BookCriteria;
+import khn.library.proj.domain.search.BookCriteria;
 import khn.library.proj.service.BookService;
 
 import org.springframework.context.ApplicationContext;

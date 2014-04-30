@@ -4,13 +4,37 @@
 	http://www.springframework.org/schema/webflow
 	http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
 	start-state="searchBooksForm">	
+	
+  <var name="bookCriteria" class="khn.library.proj.domain.search.BookCriteria"/>
   
-  <view-state id="searchBooksForm">
+     <view-state id="searchBooksForm" model="bookCriteria" >    
+    	<!-- Spring automatically binds all unless you want to specifically bind some fields
+    	then use 'binding' as follows in commented out code -->
+    	<!-- <binder>
+			<binding property="keyword" />
+			<binding property="author" />
+		</binder>  -->
+	  	<transition on="search" to="processSearch" >
+		</transition>
+  </view-state>
+  
+  <action-state id="processSearch" >
+		<set name="flowScope.booksFound"
+		 value = "bookService.search(bookCriteria)" />
+  		<transition on="success" to="bookList" /> 	
+		
+  </action-state>
+  <view-state id="bookList">
+  	<transition on="next" to="endState" />
+  </view-state>
+  
+  <!-- Alternative to using above -->
+  <!-- <view-state id="searchBooksForm">
     <on-render>
             <evaluate expression="searchBooksFormAction.setupForm" />
     </on-render>
   	<transition on="search" to="searchBooksActionState">
-		 <!-- <evaluate expression="searchBooksFormAction.bindAndValidate" /> -->
+		 <evaluate expression="searchBooksFormAction.bindAndValidate" />
 	</transition>
   </view-state>
   
@@ -21,7 +45,7 @@
   <action-state id="searchBooksActionState">
   	<evaluate expression="searchBooksAction.searchBooks" />
   	<transition on="success" to="bookList" /> 
-  </action-state>
+  </action-state> -->
   
   <end-state id="endState"/>
 </flow>

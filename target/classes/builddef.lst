@@ -13,11 +13,11 @@ C:\Users\Kathie\Documents\workspace-spring-nov2013\A-khn-library\src\main\java\k
 C:\Users\Kathie\Documents\workspace-spring-nov2013\A-khn-library\src\main\java\khn\library\proj\domain\HomeController.java
 C:\Users\Kathie\Documents\workspace-spring-nov2013\A-khn-library\src\main\java\khn\library\proj\beans\CustomPropertyEditorRegistrar.java
 C:\Users\Kathie\Documents\workspace-spring-nov2013\A-khn-library\src\main\java\khn\library\proj\webflow\action\SearchBooksAction.java
+C:\Users\Kathie\Documents\workspace-spring-nov2013\A-khn-library\src\main\java\khn\library\proj\domain\search\BookCriteria.java
 C:\Users\Kathie\Documents\workspace-spring-nov2013\A-khn-library\src\main\java\khn\library\proj\service\LibraryServiceImpl.java
 C:\Users\Kathie\Documents\workspace-spring-nov2013\A-khn-library\src\main\java\khn\library\proj\service\LibraryService.java
 C:\Users\Kathie\Documents\workspace-spring-nov2013\A-khn-library\src\main\java\khn\library\proj\service\BookServiceImpl.java
 C:\Users\Kathie\Documents\workspace-spring-nov2013\A-khn-library\src\main\java\khn\library\proj\ConsoleApp\ConsoleApp.java
-C:\Users\Kathie\Documents\workspace-spring-nov2013\A-khn-library\src\main\java\khn\library\proj\domain\BookCriteria.java
 C:\Users\Kathie\Documents\workspace-spring-nov2013\A-khn-library\src\main\java\khn\library\proj\webflow\action\GetHolidaysAction.java
 C:\Users\Kathie\Documents\workspace-spring-nov2013\A-khn-library\src\main\java\khn\library\proj\mvc\ControllerTest.java
 C:\Users\Kathie\Documents\workspace-spring-nov2013\A-khn-library\src\main\java\khn\library\proj\service\BookService.java
